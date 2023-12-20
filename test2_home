@@ -1,0 +1,146 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_name'])) {
+    // If not logged in, redirect to the login page
+    header("Location: index.php");
+    exit();
+}
+// If the user is logged in, you can use their username from the session
+$user_name = $_SESSION['user_name'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealers - Homepage</title>
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist\css\bootstrap.css">
+    <!-- <link rel="stylesheet" href="CSS/index CSS.css"> -->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Logo and branding -->
+        <div class="logo">
+            <a href="#"><img src="images\logo.jpg" alt="Car Dealers Logo"></a>
+        </div>
+        <!-- Dealers Title -->
+        <h1 class="dealers-title">Ndinga Motors</h1>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="#" class="btn">Home</a></li>
+                <li><a href="Dealers.html" class="btn">Dealers</a></li>
+                <li><a href="maintainance.html" class="btn">Maintanace</a></li>
+                <li><a href="help.html" class="btn">Help</a></li>
+                <li><a href="Registration.html" class="btn">Register</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+                <li><a href="logout.php" class="btn">logout</a></li>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hello section -->
+        <section class="hello" style="background-image: url('images/benz6.jpg');">
+            <h1>Welcome to Ndinga Motors</h1>
+            <p>Discover the best selection of cars for sale and connect with trusted sellers.</p>
+        </section>
+
+        <!-- Value proposition -->
+        <section class="value-proposition">
+            <h2>Why Choose Ndinga Motors?</h2>
+            <p>Here are some reasons why our platform is the best choice for car buyers and sellers:</p>
+            <ul>
+                <li>Wide selection of vehicles</li>
+                <li>Secure transactions</li>
+                <li>User-friendly interface</li>
+            </ul>
+        </section>
+
+        <!-- Featured car listings -->
+        <section class="featured-listings">
+            <h2>Featured Car Listings</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="images\jeep.jpg" class="card-img-top" alt="jeep">
+                        <div class="card-body">
+                            <h5 class="card-title">2023 Jeep</h5>
+                            <p class="card-text">Make: JEEP</p>
+                            <p class="card-text">Body: SUV</p>
+                            <p class="card-text">Price: $25,000</p>
+                            <p class="card-text">Mileage: 10,000 miles</p>
+                            <p class="card-text">Contact: 0742029829</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="images\bmw.jfif" class="card-img-top" alt="bmww">
+                        <div class="card-body">
+                            <h5 class="card-title">2019 BMW</h5>
+                            <p class="card-text">Make: BMW</p>
+                            <p class="card-text">Body: SUV</p>
+                            <p class="card-text">Price: $18,500</p>
+                            <p class="card-text">Mileage: 10,000 miles</p>
+                            <p class="card-text">Contact: 0756290460</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Quick buttons -->
+        <section class="cta-buttons">
+            <a href="Dealers.html" class="btn btn-secondary">Want to Sell Your Car?</a>
+            <a href="Registration.html" class="btn btn-secondary">Register Now</a>
+        </section>
+
+
+        <!-- Testimonials and reviews -->
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"I found my dream car on Ndinga Motors. The process was easy and the seller was reliable. Highly
+                    recommended!"</p>
+                <p>- juma ally</p>
+            </div>
+            <div class="testimonial">
+                <p>"Ndinga Motors made it simple to sell my car. Within a week, I had multiple offers. Great platform!"
+                </p>
+                <p>- Ashura bakari</p>
+            </div>
+        </section>
+
+        <!-- About Us section -->
+        <section class="about-us">
+            <h2>About Ndinga Motors</h2>
+            <p>Ndinga Motors is a trusted online platform that connects car buyers and sellers, providing a seamless car
+                shopping experience. Our mission is to make the car buying and selling process efficient, secure, and
+                enjoyable for everyone.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Car Dealers. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="help.html">Contact Us</a></li>
+        </ul>
+        <p>Designed by Group 6 CSDFE 2</p>
+    </footer>
+</body>
+
+</html>
